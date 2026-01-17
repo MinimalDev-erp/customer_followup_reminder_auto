@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_followup_reminder,customer.followup.reminder,model_customer_followup_reminder,,1,1,1,1

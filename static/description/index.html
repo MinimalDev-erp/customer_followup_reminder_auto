@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Customer Follow-up Reminder Automation</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            color: #875A7B;
+        }
+        .box {
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .highlight {
+            background-color: #f7f0f6;
+            padding: 12px;
+            border-left: 4px solid #875A7B;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Customer Follow-up Reminder Automation</h1>
+
+    <div class="box">
+        <p>
+            This module helps you automatically send customer follow-up reminders
+            using scheduled cron jobs. It is ideal for CRM teams and businesses
+            that want to ensure no customer follow-up is missed.
+        </p>
+    </div>
+
+    <h2>Key Features</h2>
+    <div class="box">
+        <ul>
+            <li>Automatic follow-up reminders using cron</li>
+            <li>Configurable follow-up days</li>
+            <li>Dynamic message templates using <b>{{ }}</b> variables</li>
+            <li>Works with Customers and CRM Leads</li>
+            <li>No external API dependency</li>
+            <li>Clean and easy configuration</li>
+        </ul>
+    </div>
+
+    <h2>How It Works</h2>
+    <div class="box">
+        <ol>
+            <li>Create a follow-up reminder configuration</li>
+            <li>Select the target model (Customer or CRM Lead)</li>
+            <li>Define after how many days the reminder should be sent</li>
+            <li>Write a dynamic reminder message</li>
+            <li>The system automatically processes reminders daily</li>
+        </ol>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <img src="image.png"
+                 alt="Customer Follow-up Reminder Workflow"
+                 style="max-width: 100%; border: 1px solid #ddd; border-radius: 6px;">
+        </div>
+    </div>
+
+    <h2>Example Message</h2>
+    <div class="highlight">
+        Hello {{name}}, this is a reminder regarding your recent interaction with us.
+    </div>
+
+    <h2>Compatible Odoo Versions</h2>
+    <div class="box">
+        <ul>
+            <li>Odoo 16</li>
+        </ul>
+    </div>
+
+    <h2>Use Cases</h2>
+    <div class="box">
+        <ul>
+            <li>CRM follow-ups</li>
+            <li>Customer engagement reminders</li>
+            <li>Sales lead follow-up automation</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

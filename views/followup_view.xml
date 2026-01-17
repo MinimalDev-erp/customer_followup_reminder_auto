@@ -1,0 +1,52 @@
+<odoo>
+    <record id="view_customer_followup_reminder_form" model="ir.ui.view">
+        <field name="name">customer.followup.reminder.form</field>
+        <field name="model">customer.followup.reminder</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="model_id"/>
+                        <field name="followup_days"/>
+                    </group>
+
+                    <group>
+                        <field name="message_body" placeholder="Use {{name}}, {{email}}, {{phone}}"/>
+                    </group>
+
+                    <group>
+                        <field name="last_run" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_customer_followup_reminder_tree" model="ir.ui.view">
+        <field name="name">customer.followup.reminder.tree</field>
+        <field name="model">customer.followup.reminder</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="model_id"/>
+                <field name="followup_days"/>
+                <field name="active"/>
+                <field name="last_run"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_customer_followup_reminder" model="ir.actions.act_window">
+        <field name="name">Follow-up Reminders</field>
+        <field name="res_model">customer.followup.reminder</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_customer_followup_root" name="Follow-up Automation"/>
+    <menuitem id="menu_customer_followup"
+              name="Follow-up Reminders"
+              parent="menu_customer_followup_root"
+              action="action_customer_followup_reminder"/>
+</odoo>
